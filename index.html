@@ -1,1 +1,53 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Seating</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Wedding Seating Finder</h1>
+    <p>Please enter your name to find your table:</p>
+    <input type="text" id="guestName" placeholder="Your Name">
+    <button onclick="findTable()">Find Table</button>
+    <p id="result"></p>
+
+    <script>
+        const seating = {
+            // Replace with your actual guest list and table numbers
+            'John Doe': 1,
+            'Jane Smith': 2,
+            'Alice Johnson': 3
+        };
+
+        function findTable() {
+            const guestName = document.getElementById('guestName').value;
+            const tableNumber = seating[guestName];
+            const result = document.getElementById('result');
+
+            if (tableNumber) {
+                result.innerHTML = `Hello, ${guestName}! You are seated at Table ${tableNumber}.`;
+            } else {
+                result.innerHTML = "Sorry, we couldn't find your name. Please make sure you entered your name correctly.";
+            }
+        }
+    </script>
+</body>
+</html>
