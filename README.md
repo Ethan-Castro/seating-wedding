@@ -1,0 +1,5 @@
+# seating-wedding
+
+Click INDEX.HTML
+
+COPY AND PASTE THE ENTIRE CODE ONTO YOURS
